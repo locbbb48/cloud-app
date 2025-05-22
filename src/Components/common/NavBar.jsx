@@ -1,3 +1,6 @@
+import { loginWithCognito, signupWithCognito } from "../../services/cognitoAuth";
+
+
 import React, { useState } from 'react'
 //import logo from "../../assets/Logo/Logo-Full-Light.png"
 import { Link, matchPath } from 'react-router-dom'
@@ -255,20 +258,41 @@ const NavBar = ({ setProgress }) => {
                     }
                     {
                         token == null && (
-                            <Link to='/login' className='text-richblack-25' onClick={() => { dispatch(setProgress(100)) }} >
-                                <button className='rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[7px] text-richblack-100'>
-                                    Login
-                                </button>
-                            </Link>
+                            //<Link to='/login' className='text-richblack-25' onClick={() => { dispatch(setProgress(100)) }} >
+                            //    <button className='rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[7px] text-richblack-100'>
+                            //        Login
+                            //    </button>
+                            //</Link>
+                            <button
+                                onClick={() => {
+                                    dispatch(setProgress(100));
+                                    loginWithCognito();
+                                }}
+                                className='rounded-[8px] border border-yellow-50 bg-yellow-50 text-black px-[12px] py-[7px] hover:scale-95 transition-all duration-200'
+
+                            >
+                                Login
+                            </button>
                         )
                     }
                     {
                         token == null && (
-                            <Link to='/signup' className='text-richblack-25' onClick={() => { dispatch(setProgress(100)) }} >
-                                <button className='rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[7px] text-richblack-100' >
-                                    Signup
-                                </button>
-                            </Link>
+                            //<Link to='/signup' className='text-richblack-25' onClick={() => { dispatch(setProgress(100)) }} >
+                            //    <button className='rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[7px] text-richblack-100' >
+                            //        Signup
+                            //    </button>
+                            //</Link>
+                            <button
+                                onClick={() => {
+                                    dispatch(setProgress(100));
+                                    signupWithCognito();
+                                }}
+                                className='rounded-[8px] border border-yellow-50 bg-yellow-50 text-black px-[12px] py-[7px] hover:scale-95 transition-all duration-200'
+
+                            >
+                                Signup
+                            </button>
+
                         )
                     }
                     {
