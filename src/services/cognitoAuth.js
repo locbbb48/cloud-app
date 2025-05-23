@@ -1,7 +1,7 @@
 ﻿// src/services/cognitoAuth.js
 
 const CLIENT_ID = "5rfqdq73lpo0c2aqq2oqnh6vi2";
-const REDIRECT_URI = "http://localhost:3000/dashboard";
+const REDIRECT_URI = "http://localhost:3000/callback";
 const DOMAIN = "https://cloud-app-demo.auth.ap-southeast-1.amazoncognito.com";
 const RESPONSE_TYPE = "code";
 const SCOPE = "email openid phone";

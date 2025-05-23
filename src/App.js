@@ -67,7 +67,10 @@ function App() {
       <ScrollToTop />
           <Routes>
 
-              <Route path="/dashboard/my-profile" element={<CognitoCallbackHandler />} />
+              {/*<Route path="/dashboard/my-profile" element={<CognitoCallbackHandler />} />*/}
+
+              <Route path="/callback" element={<CognitoCallbackHandler />} />
+
 
         <Route path="/" element={<Home />} />
 
