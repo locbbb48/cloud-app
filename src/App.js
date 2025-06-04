@@ -1,3 +1,5 @@
+﻿import CognitoCallbackHandler from "./pages/CognitoCallbackHandler";
+
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -63,7 +65,13 @@ function App() {
         </div>
       )}
       <ScrollToTop />
-      <Routes>
+          <Routes>
+
+              {/*<Route path="/dashboard/my-profile" element={<CognitoCallbackHandler />} />*/}
+
+              <Route path="/callback" element={<CognitoCallbackHandler />} />
+
+
         <Route path="/" element={<Home />} />
 
         <Route path="/catalog/:catalog" element={<Catalog />} />
@@ -106,7 +114,7 @@ function App() {
               <Dashboard />
             </PrivateRoute>
           }
-        >
+        >   
           <Route path="dashboard/my-profile" element={<MyProfile />} />
           <Route path="dashboard/settings" element={<Setting />} />
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (

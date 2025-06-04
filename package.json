@@ -8,6 +8,8 @@
     "axios": "^1.6.0",
     "bcryptjs": "^2.4.3",
     "concurrently": "^8.0.1",
+    "jwt-decode": "^4.0.0",
+    "oidc-client-ts": "^3.2.1",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
